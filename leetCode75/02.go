@@ -4,10 +4,13 @@
 * For two strings s and t, we say "t divides s" if and only if s = t + ... + t (i.e., t is concatenated with itself one or more times).
 * Given two strings str1 and str2, return the largest string x such that x divides both str1 and str2.
 */
-package main
-import ("fmt")
+package leetCode75
+import (
+    "fmt"
+    "testing"
+)
 
-func main(){
+func ttt(){
     fmt.Println(gcdOfStrings("OBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNO","OBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNO"))
     fmt.Println(gcdOfStrings("CXTXNCXTXNCXTXNCXTXNCXTXN","CXTXNCXTXNCXTXNCXTXNCXTXNCXTXNCXTXNCXTXNCXTXNCXTXNCXTXNCXTXNCXTXN"))
     fmt.Println(gcdOfStrings("ABABABAB","ABAB"))
@@ -17,7 +20,11 @@ func main(){
     fmt.Println(gcdOfStrings("LEET","CODE"))
 }
 
-func gcdOfStrings(str1 string, str2 string) string {
+func TestGcdOfStrings(t *testing.T){
+    fmt.Println(gcdOfStrings("OBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNO","OBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNOOBCNO"))
+}
+
+func GcdOfStrings(str1 string, str2 string) string {
     var largestDivisibleNumber int = calculateLargestDivisibleNumber( len(str1), len(str2))
 
     intersectionString := str1[0:largestDivisibleNumber]

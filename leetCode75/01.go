@@ -6,10 +6,10 @@
 * If a string is longer than the other, append the additional letters onto the end of the merged string.
 
 */
-package main
+package LeetCode75
 import ("fmt")
 
-func main(){
+func main2(){
     fmt.Println(mergeAlternately("abc","pqr"));
     fmt.Println(mergeAlternately("ab","pqrs"));
     fmt.Println(mergeAlternately("abcd","pq"));
