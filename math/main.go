@@ -2,7 +2,7 @@
 package main
 
 import (
-	"leetcode-go/math/clockface/svg"
+	"leetcode-go/math/svg"
 	"os"
 	"time"
 )
